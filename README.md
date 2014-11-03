@@ -6,6 +6,7 @@ How to install
 
     $ cd my_django_project
     $ git clone https://github.com/atodorov/django-twilio-sms.git twilio_sms
+    $ pip install twilio
 
 Then edit `settings.py` to look like this
 
@@ -21,6 +22,10 @@ TWILIO_NUMBER = "+1-my-number"
 TWILIO_ACCOUNT_SID = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 TWILIO_AUTH_TOKEN = "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
 ```
+
+Update DB tables:
+
+    ./manage.py syncdb
 
 How to use
 -----------
@@ -40,3 +45,8 @@ Send messages to everyone or just a single number:
     
     Sends SMS text to the specified number(s) (or everyone)
 
+
+More info
+---------
+
+Pricing info is available at http://www.twilio.com/sms/pricing
